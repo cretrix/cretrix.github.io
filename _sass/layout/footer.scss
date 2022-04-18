@@ -1,0 +1,41 @@
+
+footer {
+    padding: 25px 150px;
+    background: #1a1a1c;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        .details {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+
+            & > div {
+                h3 {
+                    font-family: "SF Pro Display Semibold";
+                    font-size: 18px;
+                    line-height: 16px;
+                }
+                p {
+                    margin-top: 1rem;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-family: "SF Pro Display Medium";
+                }
+            }
+        }
+
+        .contact {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+
+            & > div {
+                cursor: pointer;
+            }
+        }
+    }
+}

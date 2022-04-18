@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem 9.3rem;
+
+    .menu {
+        display: flex;
+        gap: 3rem;
+
+        h3 {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 16px;
+        }
+    }
+}
