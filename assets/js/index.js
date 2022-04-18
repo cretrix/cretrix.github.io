@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let button = document.querySelector("#explore");
-  button.onclick = () => {
-    let os = getMobileOS()
-    doScrolling("#projects", os === 'Iphone' ? 300 : os === "iOS" ? 1000 : 50);
-  };
-
   const getMobileOS = () => {
     const ua = navigator.userAgent
     if (/android/i.test(ua)) {
@@ -18,6 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return "Other"
   }
+
+  let button = document.querySelector("#explore");
+  let os = getMobileOS()
+  if (button) {
+    button.onclick = () => {
+      doScrolling("#projects", os === 'Iphone' ? 300 : os === "iOS" ? 1000 : 50);
+    };
+  }
+
+  let nav = document.querySelector('nav')
+  nav.addEventListener('click', (e) => {
+    let from = e.target;
+    if (!from.className || !/btn--/i.test(from.className)) return;
+    let scrollId = from.className.substring(5)
+    doScrolling(`#${scrollId}`, os === 'Iphone' ? 300 : os === "iOS" ? 1000 : 50)
+  })
 
   function getElementY(query) {
     return (

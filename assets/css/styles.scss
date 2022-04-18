@@ -53,7 +53,7 @@ body {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-    -webkit-text-fill-color: #1A1A1C;
+    -webkit-text-fill-color: #1a1a1c;
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     transition: background-color 5000s ease-in-out 0s;
 }
@@ -145,7 +145,7 @@ section h3:first-of-type {
 }
 
 .services {
-    margin-top: 5rem;
+    padding-top:5rem;
     padding-left: 9.3rem;
     padding-right: 9.3rem;
 
@@ -180,7 +180,7 @@ section h3:first-of-type {
 }
 
 .projects {
-    margin-top: 5rem;
+    padding-top:5rem;
     width: 100%;
     .container {
         margin-top: 4rem;
@@ -238,7 +238,7 @@ section h3:first-of-type {
 }
 
 .team {
-    margin-top: 5rem;
+    padding-top:5rem;
 
     .container {
         width: 100%;
@@ -264,7 +264,7 @@ section h3:first-of-type {
 }
 
 .talk {
-    margin-top: 5rem;
+    padding-top:5rem;
     color: #1a1a1c;
     p {
         text-align: center;
@@ -299,6 +299,18 @@ section h3:first-of-type {
                     color: #838388;
                     font-family: "SF Pro Display Light";
                 }
+                &:focus {
+                    border-bottom: 2px solid #3caeed;
+                }
+                & + span {
+                    display: none;
+                }
+                &:invalid {
+                    border-bottom: 2px solid #e33b39;
+                    // & + span {
+                    //     display: inline;
+                    // }
+                }
             }
         }
         .send {
@@ -327,7 +339,7 @@ section h3:first-of-type {
 }
 
 .address {
-    margin-top: 5rem;
+    padding-top:5rem;
 
     p:first-of-type {
         text-align: center;
@@ -365,6 +377,47 @@ section h3:first-of-type {
 
             &:hover {
                 box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+            }
+        }
+    }
+}
+
+footer {
+    padding: 25px 150px;
+    background: #1a1a1c;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        .details {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+
+            & > div {
+                h3 {
+                    font-family: "SF Pro Display Semibold";
+                    font-size: 18px;
+                    line-height: 16px;
+                }
+                p {
+                    margin-top: 1rem;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-family: "SF Pro Display Medium";
+                }
+            }
+        }
+
+        .contact {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+
+            & > div {
+                cursor: pointer;
             }
         }
     }
