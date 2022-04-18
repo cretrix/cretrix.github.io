@@ -49,7 +49,14 @@ html,
 body {
     scroll-behavior: smooth;
 }
-
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #1A1A1C;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
 nav {
     display: flex;
     align-items: center;
@@ -111,8 +118,14 @@ section h3:first-of-type {
                 outline: none;
                 background: #ffffff;
                 border-radius: 16px;
-                font-family: "SF Pro Display Medium";
+                cursor: pointer;
                 box-shadow: 0px 2px 148px -2px rgba(24, 39, 75, 0.12), 0px 2px 2px -2px rgba(24, 39, 75, 0.08);
+                font-family: "SF Pro Display Medium";
+                transition: 0.4s ease;
+
+                &:hover {
+                    box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+                }
             }
         }
 
@@ -146,6 +159,11 @@ section h3:first-of-type {
         .item {
             padding: 2.6rem;
             background: #f0f0f5;
+            transition: 0.4s ease;
+
+            &:hover {
+                box-shadow: 0px 2px 8px -2px rgba(24, 39, 75, 0.12), 0px 2px 2px -2px #18274b;
+            }
 
             h4 {
                 font-family: "SF Pro Display Semibold";
@@ -173,7 +191,8 @@ section h3:first-of-type {
         gap: 2.5rem;
 
         .item {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
             .content {
                 background: #f0f0f5;
@@ -183,6 +202,11 @@ section h3:first-of-type {
                     font-size: 20px;
                     line-height: 24px;
                     font-family: "SF Pro Display Semibold";
+
+                    a {
+                        text-decoration: none;
+                        color: #1a1a1c;
+                    }
                 }
                 p {
                     max-width: 300px;
@@ -202,8 +226,13 @@ section h3:first-of-type {
             }
         }
         .item:nth-child(2),
-        .item:nth-child(3) {
-            flex-direction: row-reverse;
+        .item:nth-child(4) {
+            .content {
+                grid-area: 1 / 2 / 1 / 3;
+            }
+            .image {
+                grid-area: 1 / 1 / auto / 1;
+            }
         }
     }
 }
@@ -258,6 +287,12 @@ section h3:first-of-type {
                 border-bottom: 2px solid #f0f0f5;
                 padding: 1rem;
                 width: 100%;
+                background-color: #fff;
+                transition: 0.4s ease;
+                &:hover {
+                    border-bottom: 2px solid #838388;
+                }
+
                 &::placeholder {
                     font-size: 16px;
                     line-height: 19px;
@@ -279,9 +314,57 @@ section h3:first-of-type {
                 color: #fff;
                 font-size: 18px;
                 line-height: 20px;
-                border:none;
+                border: none;
                 outline: none;
                 font-family: "SF Pro Display Medium";
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+                }
+            }
+        }
+    }
+}
+
+.address {
+    margin-top: 5rem;
+
+    p:first-of-type {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .map-container {
+        margin: 2.5rem auto 6rem;
+        display: flex;
+        justify-content: center;
+        max-width: 800px;
+
+        .wrapper {
+            position: relative;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 14px 22px;
+            box-shadow: 0px 2px 148px -2px rgba(24, 39, 75, 0.12), 0px 2px 2px -2px rgba(24, 39, 75, 0.08);
+            border: none;
+            outline: none;
+            background: #ffffff;
+            border-radius: 8px;
+            font-size: 18px;
+            line-height: 20px;
+            cursor: pointer;
+            font-family: "SF Pro Display Semibold";
+
+            &:hover {
+                box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
             }
         }
     }

@@ -9,7 +9,7 @@ title: Cretrix
             <h1>Innovation <br /> for industry leaders</h1>
             <p>Cretrix is a Yerevan-based full-stack service design and development agency.</p>
             <p>We help each of our parnters create and maintain a digital presence truly worthy of their brand.</p>
-            <button>Explore</button>
+            <button id="explore">Explore</button>
         </div>
         <div class="gallery">
             <div class="item-1">
@@ -64,52 +64,24 @@ title: Cretrix
     </div>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
     <h3>Projects</h3>
     <div class="container">
+        {% for item in site.data.pages %}
         <div class="item">
             <div class="content">
-                <h4>Site Specs</h4>
-                <p>A cloud-based construction management software that comes with all the tools needed to keep
-                    construction projects on track. It comes with robust core features such as project planning and
-                    scheduling, financial management and accounting.</p>
+                <h4><a href="{{ site.baseurl }}{{ item.link }}">
+                        {{item.title}}
+                    </a></h4>
+                <p>{{item.description}}</p>
             </div>
             <div class="image">
-                <img src="assets/images/sitespecs.svg" />
+                <a href="{{ site.baseurl }}{{ item.link }}">
+                    <img src="{{item.img}}" />
+                </a>
             </div>
         </div>
-        <div class="item">
-            <div class="content">
-                <h4>AMS</h4>
-                <p>AdultMemberSites is another subscription-based social media platform. AMS gives creators the option
-                    to create free or paid subscriptions as per their liking, which works great, especially for new
-                    creators. Creators earn through paid media and live-streaming.</p>
-            </div>
-            <div class="image">
-                <img src="assets/images/sitespecs.svg" />
-            </div>
-        </div>
-        <div class="item">
-            <div class="content">
-                <h4>Miestro</h4>
-                <p>Miestro is an all-in-one system that makes it easy to create beautiful online classes, member sites,
-                    masterclasses and market them to your customers. With Miestro, you guide your customers through an
-                    experience with websites, emails, video classes, and resources.</p>
-            </div>
-            <div class="image">
-                <img src="assets/images/sitespecs.svg" />
-            </div>
-        </div>
-        <div class="item">
-            <div class="content">
-                <h4>Origin </h4>
-                <p>Origin offers a full complement of peer review management and production services and consultancy for
-                    a wide range of journal needs. Origin facilitates the entire journal publishing process.</p>
-            </div>
-            <div class="image">
-                <img src="assets/images/sitespecs.svg" />
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -118,13 +90,13 @@ title: Cretrix
     <h3>Team</h3>
     <div class="container">
         <div>
-            <img src="assets/images/member.svg" alt="">
+            <img src="assets/images/member-1.svg" alt="">
         </div>
         <div>
-            <img src="assets/images/member.svg" alt="">
+            <img src="assets/images/member-2.svg" alt="">
         </div>
         <div>
-            <img src="assets/images/member.svg" alt="">
+            <img src="assets/images/member-3.svg" alt="">
         </div>
     </div>
     <div class="paragraph">
@@ -153,4 +125,17 @@ title: Cretrix
     </form>
 </section>
 
+
+<section class="address">
+    <h3>ADDRESS</h3>
+    <p>
+        36 Keri St, Yerevan 0033
+    </p>
+    <div class="map-container">
+        <div class="wrapper">
+            <img src="assets/images/map.svg" alt="">
+            <button id="directions">Get Directions</button>
+        </div>
+    </div>
+</section>
 <script src="assets/js/index.js"></script>
