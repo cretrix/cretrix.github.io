@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    {% for item in site.data.content %}
+    <section class="page-header">
+        <div class="container">
+            <div class="hero-img">
+                <img src="{{item.heroimg}}" />
+            </div>
+            <div class="bottom">
+                <img src="{{item.icon}}" />
+                <h3>{{item.herotitle}}</h3>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </section>
+    <section class="page-services">
+        <h3>Services</h3>
+        <ul>
+            {% for itm in site.data.content.services %}
+            <li>{{itm.title}}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endfor %}
+    {{content}}
+    {% include contact.html %}
+    {% include footer.html %}
+</body>
+
+</html>

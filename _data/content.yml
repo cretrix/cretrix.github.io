@@ -1,0 +1,20 @@
+- herotitle: Site Specs
+  description: A cloud-based construction management software.
+  heroimg: assets/images/sitespecs-hero.svg
+  icon: assets/images/sitespecs-small.svg
+  services: 
+    - title: Complete any custom company form or document from a mobile device
+    - title: Manage all project documents using our cloud project file/folder module
+    - title: Wirelessly upload and file company forms/photos to a secure server
+    - title: Most meta data per photo enabling instant retrieval
+  ipad: assets/images/sitespecs-ipad.svg
+  iphone: assets/images/sitespecs-iphone.svg
+  desktop: assets/images/sitespecs-desktop.svg
+  other: 
+    - img: assets/images/ams.svg
+      link: /ams
+    - img: assets/images/miestro.svg
+      link: /miestro
+    - img: assets/images/origin.svg
+      link: /origin-reports
+  details: Site Specs increases jobsite productivity ten fold. Less paperwork and more building. Site Specs automatically catalogues your jobsite documentation so that you can find it later. The customer service alone separates Site Specs from your competitors. Everything else is icing on the cake. Our security is A+ rated by QualSys.
