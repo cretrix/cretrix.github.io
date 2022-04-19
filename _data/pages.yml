@@ -7,17 +7,17 @@
 
 - title: AMS
   description: AdultMemberSites is another subscription-based social media platform. AMS gives creators the option to create free or paid subscriptions as per their liking, which works great, especially for new creators. Creators earn through paid media and live-streaming.
-  img: assets/images/ams.svg
+  img: assets/images/ams/ams.svg
   link: /ams
 
 - title: Miestro
   description: Miestro is an all-in-one system that makes it easy to create beautiful online classes, member sites, masterclasses and market them to your customers. With Miestro, you guide your customers through an experience with websites, emails, video classes, and resources.
-  img: assets/images/miestro.svg
+  img: assets/images/miestro/miestro.svg
   link: /miestro
 
 - title: Origin 
   description: Origin offers a full complement of peer review management and production services and consultancy for a wide range of journal needs. Origin facilitates the entire journal publishing process.
-  img: assets/images/origin.svg
+  img: assets/images/origin/origin.svg
   link: /origin-reports
 
 

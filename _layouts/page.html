@@ -4,7 +4,9 @@
 
 <body>
     {% include header.html %}
+    {% assign id = page.url | remove: ".html" | remove: "/" %}
     {% for item in site.data.content %}
+    {% if item.id == id  %}
     <section class="page-header">
         <div class="container">
             <div class="hero-img">
@@ -25,6 +27,39 @@
             {% endfor %}
         </ul>
     </section>
+    <section class="details">
+        <h3>Details</h3>
+        <p>{{ item.details }}</p>
+    </section>
+    <section class="designs">
+        <h3>Designs</h3>
+        <div class="mobile-container">
+            {% for mobile in item.design.mobile %}
+            <div class="mobile-img">
+                <img src="{{ mobile.img }}" alt="">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="destkop-container">
+            {% for desktop in item.design.desktop %}
+            <div class="desktop-img">
+                <img src="{{ desktop.img }}" alt="">
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="other-projects">
+        <h3>See other projects</h3>
+        <div class="container">
+            {% for el in item.other %}
+            <div class="item">
+                <img src="{{el.img}}"/>
+                <a href="{{ site.baseurl }}{{ el.link }}">View project</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
     {% endfor %}
 
     {{content}}

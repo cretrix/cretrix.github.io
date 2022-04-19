@@ -1,4 +1,5 @@
-- herotitle: Site Specs
+- id: sitespecs
+  herotitle: Site Specs
   description: A cloud-based construction management software.
   heroimg: assets/images/sitespecs/sitespecs-hero.svg
   icon: assets/images/sitespecs/sitespecs-small.svg
@@ -7,15 +8,97 @@
     - title: "Manage all project documents using our cloud project file/folder module"
     - title: "Wirelessly upload and file company forms/photos to a secure server"
     - title: "Most meta data per photo enabling instant retrieval"
-  ipad: assets/images/sitespecs/sitespecs-ipad.svg
-  iphone: assets/images/sitespecs/sitespecs-ios1.svg
-  iphone2: assets/images/sitespecs/sitespecs-ios2.svg
-  desktop: assets/images/sitespecs/sitespecs-desktop.svg
+  design: 
+    mobile: 
+      - img: assets/images/sitespecs/sitespecs-ios1.svg
+      - img: assets/images/sitespecs/sitespecs-ios2.svg
+    desktop:
+      - img: assets/images/sitespecs/sitespecs-desktop.svg
   other:
-    - img: assets/images/ams.svg
+    - img: assets/images/ams/ams.svg
       link: /ams
-    - img: assets/images/miestro.svg
+    - img: assets/images/miestro/miestro.svg
       link: /miestro
-    - img: assets/images/origin.svg
+    - img: assets/images/origin/origin.svg
       link: /origin-reports
   details: Site Specs increases jobsite productivity ten fold. Less paperwork and more building. Site Specs automatically catalogues your jobsite documentation so that you can find it later. The customer service alone separates Site Specs from your competitors. Everything else is icing on the cake. Our security is A+ rated by QualSys.
+
+- id: ams
+  herotitle: Adult Member Sites
+  description: Own branded adult member site
+  heroimg: assets/images/ams/ams-hero.svg
+  icon: assets/images/ams/ams-small.svg
+  services:
+    - title: "Own Your Own Brand - custom branded site with your own domain name"
+    - title: "Powerful content management - videos, photosets, stories and store"
+    - title: "Engage with your members through comments or live chat"
+    - title: "Pay-per-message options"
+    - title: "Installable as an app for your members with your own app icon"
+    - title: "Design customization options"
+  design: 
+    mobile: 
+      - img: assets/images/ams/ams-ios1.svg
+      - img: assets/images/ams/ams-ios2.svg
+      - img: assets/images/ams/ams-ios3.svg
+    desktop:
+      - img: assets/images/ams/ams-ios4.svg
+      - img: assets/images/ams/ams-ios5.svg
+      - img: assets/images/ams/ams-ios6.svg
+  other:
+    - img: assets/images/sitespecs/sitespecs.svg
+      link: /sitespecs
+    - img: assets/images/origin/origin.svg
+      link: /origin-reports
+    - img: assets/images/miestro/miestro.svg
+      link: /miestro
+  details: AdultMemberSites helps established adult content creators take control of their brand by building their own member sites. Our platform offers creators tools to maximize engagement with their fans, and maximize revenues.
+
+
+- id: miestro
+  herotitle: Miestro
+  description: All From One Platform
+  heroimg: assets/images/miestro/miestro-hero.svg
+  icon: assets/images/miestro/miestro-small.svg
+  services:
+    - title: "Beautiful Digital Products, Down To The Last Detail"
+    - title: "Automatic triggers based on customer behavior and customized experiences that will boost engagement."
+    - title: "Custom Landing Pages, No Coding Required"
+  design: 
+    mobile: 
+      - img: assets/images/miestro/miestro-desktop1.svg
+    desktop:
+      - img: assets/images/miestro/miestro-desktop2.svg
+  other:
+    - img: assets/images/sitespecs/sitespecs.svg
+      link: /sitespecs
+    - img: assets/images/ams/ams.svg
+      link: /ams
+    - img: assets/images/origin/origin.svg
+      link: /origin-reports
+  details: Miestro is an all-in-one system that makes it easy to create beautiful online classes, member sites, masterclasses and market them to your customers.
+
+- id: origin-reports
+  herotitle: Origin Reports
+  description: Editorial Office Reporting
+  heroimg: assets/images/origin/origin-hero.svg
+  icon: assets/images/origin/origin-small.svg
+  services:
+    - title: "Professional designs that highlight performance"
+    - title: "Custom visuals"
+    - title: "Pro tips on choosing and presenting charts"
+  design: 
+    mobile: 
+      - img: assets/images/origin/origin-desktop1.svg
+      - img: assets/images/origin/origin-desktop2.svg
+    desktop:
+      - img: assets/images/origin/origin-desktop3.svg
+      - img: assets/images/origin/origin-desktop4.svg
+  other:
+    - img: assets/images/sitespecs/sitespecs.svg
+      link: /sitespecs
+    - img: assets/images/ams/ams.svg
+      link: /ams
+    - img: assets/images/miestro/miestro.svg
+      link: /miestro
+
+  details: Visualize the health of your journals with professional looking charts and tables created in a fraction of the time spent using Microsoft® Excel with Editorial Manager® and ScholarOne™ Manuscripts (eJP® coming soon).
