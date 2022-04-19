@@ -35,21 +35,32 @@
     </section>
     <section class="designs page-section">
         <h3>Designs</h3>
-        <div class="mobile-container">
-            {% for mobile in item.design.mobile %}
-            <div class="mobile-img">
-                <img src="{{ mobile.img }}" alt="">
+        {% if id == "origin-reports" %}
+            {% for image in item.design.images %}
+            <div class="origin-container">
+                <div class="wrapper">
+                    <img src="{{image.img}}" />
+                </div>
             </div>
             {% endfor %}
-        </div>
-        <div class="desktop-container">
-            {% for desktop in item.design.desktop %}
-            <div class="desktop-img">
-                <img src="{{ desktop.img }}" alt="">
+            {% else %}
+            <div class="mobile-container">
+                {% for mobile in item.design.mobile %}
+                <div class="mobile-img">
+                    <img src="{{ mobile.img }}" alt="">
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+            <div class="desktop-container">
+                {% for desktop in item.design.desktop %}
+                <div class="desktop-img">
+                    <img src="{{ desktop.img }}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </section>
+
     <section class="other-projects page-section" id="projects">
         <h3>See other projects</h3>
         <div class="container">

@@ -82,8 +82,12 @@
     .desktop-container {
         margin-top: 1.5rem;
     }
+    .origin-container {
+        margin: 2.5rem 0;
+    }
     .mobile-container,
-    .desktop-container {
+    .desktop-container,
+    .origin-container {
         display: flex;
         background: #f0f0f5;
         justify-content: center;

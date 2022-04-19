@@ -87,10 +87,9 @@
     - title: "Custom visuals"
     - title: "Pro tips on choosing and presenting charts"
   design: 
-    mobile: 
+    images: 
       - img: assets/images/origin/origin-desktop1.svg
       - img: assets/images/origin/origin-desktop2.svg
-    desktop:
       - img: assets/images/origin/origin-desktop3.svg
       - img: assets/images/origin/origin-desktop4.svg
   other:
