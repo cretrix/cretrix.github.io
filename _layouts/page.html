@@ -6,20 +6,22 @@
     {% include header.html %}
     {% assign id = page.url | remove: ".html" | remove: "/" %}
     {% for item in site.data.content %}
-    {% if item.id == id  %}
-    <section class="page-header">
+    {% if item.id == id %}
+    <section class="page-header page-section">
         <div class="container">
             <div class="hero-img">
                 <img src="{{item.heroimg}}" />
             </div>
             <div class="bottom">
-                <img src="{{item.icon}}" />
-                <h3>{{item.herotitle}}</h3>
+                <div>
+                    <img src="{{item.icon}}" />
+                    <h3>{{item.herotitle}}</h3>
+                </div>
                 <p>{{item.description}}</p>
             </div>
         </div>
     </section>
-    <section class="page-services" id="services">
+    <section class="page-services page-section" id="services">
         <h3>Services</h3>
         <ul>
             {% for element in item.services %}
@@ -27,11 +29,11 @@
             {% endfor %}
         </ul>
     </section>
-    <section class="details">
+    <section class="page-details page-section">
         <h3>Details</h3>
         <p>{{ item.details }}</p>
     </section>
-    <section class="designs">
+    <section class="designs page-section">
         <h3>Designs</h3>
         <div class="mobile-container">
             {% for mobile in item.design.mobile %}
@@ -40,7 +42,7 @@
             </div>
             {% endfor %}
         </div>
-        <div class="destkop-container">
+        <div class="desktop-container">
             {% for desktop in item.design.desktop %}
             <div class="desktop-img">
                 <img src="{{ desktop.img }}" alt="">
@@ -48,13 +50,18 @@
             {% endfor %}
         </div>
     </section>
-    <section class="other-projects" id="projects">
+    <section class="other-projects page-section" id="projects">
         <h3>See other projects</h3>
         <div class="container">
             {% for el in item.other %}
             <div class="item">
-                <img src="{{el.img}}"/>
-                <a href="{{ site.baseurl }}{{ el.link }}">View project</a>
+                <div class="wrapper">
+                    <img src="{{el.img}}" />
+                </div>
+                <a href="{{ site.baseurl }}{{ el.link }}">
+                    View project
+                    <img src="assets/images/arrow.svg" />
+                </a>
             </div>
             {% endfor %}
         </div>
