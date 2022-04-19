@@ -42,7 +42,7 @@
       - img: assets/images/ams/ams-ios3.svg
     desktop:
       - img: assets/images/ams/ams-ios4.svg
-      - img: assets/images/ams/ams-ios5.svg
+      - img: assets/images/ams/ams-ios5.png
       - img: assets/images/ams/ams-ios6.svg
   other:
     - img: assets/images/sitespecs/sitespecs.svg

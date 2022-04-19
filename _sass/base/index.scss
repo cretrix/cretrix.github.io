@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "SF Pro Display", sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -16,4 +17,8 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: #1a1a1c;
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+    resize: none;
 }

@@ -72,4 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navigator.geolocation.getCurrentPosition(showPosition);
     }
   }
+  let textareaElem = document.querySelector('textarea');
+  const counterElem = document.querySelector('.counter');
+  textareaElem.addEventListener('input', function (e) {
+    let countInput = textareaElem.value.length;
+    counterElem.innerHTML = `${countInput}/300`;
+  });
 })

@@ -23,6 +23,8 @@ section h3:first-of-type {
             }
             p {
                 max-width: 400px;
+                font-size: 18px;
+                line-height: 22px;
             }
             p:first-of-type {
                 margin-top: 1rem;
@@ -125,6 +127,10 @@ section h3:first-of-type {
                     a {
                         text-decoration: none;
                         color: #1a1a1c;
+                        transition: 0.4s ease;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 p {
@@ -137,6 +143,10 @@ section h3:first-of-type {
                 }
             }
             .image {
+                transition: 0.5s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -191,7 +201,12 @@ section h3:first-of-type {
         margin: 2.5rem auto;
         .form-input {
             width: 100%;
-            input {
+            .counter {
+                float: right;
+                margin-top: 0.5rem;
+            }
+            input,
+            textarea {
                 outline: none;
                 border: none;
                 border-bottom: 2px solid #f0f0f5;
@@ -212,9 +227,11 @@ section h3:first-of-type {
                 &:focus {
                     border-bottom: 2px solid #3caeed;
                 }
-                & + span {
-                    display: none;
-                }
+            }
+            input {
+                // & + span {
+                //     display: none;
+                // }
                 &:invalid {
                     border-bottom: 2px solid #e33b39;
                     // & + span {
