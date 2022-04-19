@@ -1,16 +1,17 @@
 - herotitle: Site Specs
   description: A cloud-based construction management software.
-  heroimg: assets/images/sitespecs-hero.svg
-  icon: assets/images/sitespecs-small.svg
-  services: 
-    - title: Complete any custom company form or document from a mobile device
-    - title: Manage all project documents using our cloud project file/folder module
-    - title: Wirelessly upload and file company forms/photos to a secure server
-    - title: Most meta data per photo enabling instant retrieval
-  ipad: assets/images/sitespecs-ipad.svg
-  iphone: assets/images/sitespecs-iphone.svg
-  desktop: assets/images/sitespecs-desktop.svg
-  other: 
+  heroimg: assets/images/sitespecs/sitespecs-hero.svg
+  icon: assets/images/sitespecs/sitespecs-small.svg
+  services:
+    - title: "Complete any custom company form or document from a mobile device"
+    - title: "Manage all project documents using our cloud project file/folder module"
+    - title: "Wirelessly upload and file company forms/photos to a secure server"
+    - title: "Most meta data per photo enabling instant retrieval"
+  ipad: assets/images/sitespecs/sitespecs-ipad.svg
+  iphone: assets/images/sitespecs/sitespecs-ios1.svg
+  iphone2: assets/images/sitespecs/sitespecs-ios2.svg
+  desktop: assets/images/sitespecs/sitespecs-desktop.svg
+  other:
     - img: assets/images/ams.svg
       link: /ams
     - img: assets/images/miestro.svg

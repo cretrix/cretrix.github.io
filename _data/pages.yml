@@ -2,7 +2,7 @@
   description: A cloud-based construction management software that comes with all the tools needed to keep
                     construction projects on track. It comes with robust core features such as project planning and
                     scheduling, financial management and accounting.
-  img: assets/images/sitespecs.svg
+  img: assets/images/sitespecs/sitespecs.svg
   link: /sitespecs
 
 - title: AMS

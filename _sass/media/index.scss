@@ -37,7 +37,11 @@
             .item {
                 grid-template-columns: repeat(1, 1fr);
                 .content {
-                    padding: 1.5rem 1.5rem 4rem;
+                    padding: 1.5rem;
+
+                    p {
+                        line-height: 22px;
+                    }
                 }
             }
 
@@ -87,10 +91,6 @@
 
 @media screen and (max-width: 600px) {
     .team {
-        .container {
-            padding: 1.5rem;
-            margin-top: 1rem;
-        }
         .paragraph {
             padding: 1.5rem;
             margin: 0rem auto;

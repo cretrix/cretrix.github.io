@@ -20,12 +20,13 @@
     <section class="page-services">
         <h3>Services</h3>
         <ul>
-            {% for itm in site.data.content.services %}
-            <li>{{itm.title}}</li>
+            {% for element in item.services %}
+            <li>{{element.title}}</li>
             {% endfor %}
         </ul>
     </section>
     {% endfor %}
+
     {{content}}
     {% include contact.html %}
     {% include footer.html %}
