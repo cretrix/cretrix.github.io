@@ -7,6 +7,7 @@
     {% assign id = page.url | remove: ".html" | remove: "/" %}
     {% for item in site.data.content %}
     {% if item.id == id %}
+
     <section class="page-header page-section">
         <div class="container">
             <div class="hero-img">
@@ -35,29 +36,29 @@
     </section>
     <section class="designs page-section">
         <h3>Designs</h3>
-        {% if id == "origin-reports" %}
-            {% for image in item.design.images %}
-            <div class="origin-container">
-                <div class="wrapper">
-                    <img src="{{image.img}}" />
-                </div>
+        {% if id == "origin-reports" or id == "miestro" %}
+        {% for image in item.design.images %}
+        <div class="{{id}}-container">
+            <div class="wrapper">
+                <img src="{{image.img}}" />
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="mobile-container mobile-{{id}}">
+            {% for mobile in item.design.mobile %}
+            <div class="mobile-img mobile-img-{{id}}">
+                <img src="{{ mobile.img }}" alt="">
             </div>
             {% endfor %}
-            {% else %}
-            <div class="mobile-container">
-                {% for mobile in item.design.mobile %}
-                <div class="mobile-img">
-                    <img src="{{ mobile.img }}" alt="">
-                </div>
-                {% endfor %}
+        </div>
+        <div class="desktop-container desktop-{{ id }}">
+            {% for desktop in item.design.desktop %}
+            <div class="desktop-img">
+                <img src="{{ desktop.img }}" alt="">
             </div>
-            <div class="desktop-container">
-                {% for desktop in item.design.desktop %}
-                <div class="desktop-img">
-                    <img src="{{ desktop.img }}" alt="">
-                </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
         {% endif %}
     </section>
 

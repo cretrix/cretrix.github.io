@@ -64,9 +64,8 @@
     - title: "Automatic triggers based on customer behavior and customized experiences that will boost engagement."
     - title: "Custom Landing Pages, No Coding Required"
   design: 
-    mobile: 
+    images: 
       - img: assets/images/miestro/miestro-desktop1.svg
-    desktop:
       - img: assets/images/miestro/miestro-desktop2.svg
   other:
     - img: assets/images/sitespecs/sitespecs.svg

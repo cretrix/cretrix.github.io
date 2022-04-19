@@ -1,9 +1,9 @@
-@media screen and (min-width:1800px){
-    .site-header{
-        .container{
-            .content{
+@media screen and (min-width: 1800px) {
+    .site-header {
+        .container {
+            .content {
                 padding: 220px 97px;
-                p{
+                p {
                     max-width: 70%;
                 }
             }
@@ -28,6 +28,13 @@
             flex-direction: column;
         }
     }
+    .page-header {
+        .bottom {
+            flex-direction: column;
+            align-items: start !important;
+            gap: 10px;
+        }
+    }
 }
 @media screen and (max-width: 980px) {
     footer {
@@ -39,6 +46,16 @@
                 flex-direction: column;
                 text-align: center;
             }
+        }
+    }
+    .designs {
+        .desktop-sitespecs {
+            display: none;
+        }
+    }
+    .other-projects {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
@@ -85,6 +102,28 @@
             }
         }
     }
+    .designs {
+        .mobile-container,
+        .desktop-ams {
+            flex-direction: column;
+            align-items: center;
+            background: none;
+            padding-top: 0;
+            margin-top: 0;
+            .mobile-img,
+            .desktop-img {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f0f0f5;
+                padding: 2.5rem 0;
+                img {
+                    width: unset;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -98,6 +137,10 @@
     }
     .map-container {
         padding: 1rem;
+    }
+    .page-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
@@ -174,5 +217,8 @@
     .talk p {
         line-height: 22px;
         letter-spacing: 0.02em;
+    }
+    .page-section:first-of-type {
+        padding-top: 3rem;
     }
 }

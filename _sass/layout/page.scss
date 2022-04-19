@@ -82,12 +82,14 @@
     .desktop-container {
         margin-top: 1.5rem;
     }
-    .origin-container {
+    .origin-reports-container,
+    .miestro-container {
         margin: 2.5rem 0;
     }
     .mobile-container,
     .desktop-container,
-    .origin-container {
+    .origin-reports-container,
+    .miestro-container {
         display: flex;
         background: #f0f0f5;
         justify-content: center;
@@ -105,9 +107,9 @@
 .other-projects {
     .container {
         width: 100%;
-        display: flex;
         gap: 2.5rem;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         .item {
             display: flex;
             flex-direction: column;
