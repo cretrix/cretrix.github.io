@@ -37,13 +37,13 @@
     - title: "Design customization options"
   design: 
     mobile: 
-      - img: assets/images/ams/ams-ios1.svg
-      - img: assets/images/ams/ams-ios2.svg
+      - img: assets/images/ams/ams-ios1.png
+      - img: assets/images/ams/ams-ios2.png
       - img: assets/images/ams/ams-ios3.svg
     desktop:
-      - img: assets/images/ams/ams-ios4.svg
+      - img: assets/images/ams/ams-ios4.png
       - img: assets/images/ams/ams-ios5.png
-      - img: assets/images/ams/ams-ios6.svg
+      - img: assets/images/ams/ams-ios6.png
   other:
     - img: assets/images/sitespecs/sitespecs.svg
       link: /sitespecs
