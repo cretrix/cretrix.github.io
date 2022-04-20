@@ -89,20 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   targets.forEach(lazyLoad);
 
-
-  let target = document.querySelector('.paragraph-skeleton')
-  let heading = target.querySelector('h3')
-  let desc = target.querySelector('p')
-
-  setTimeout(() => {
-    heading.classList.add('loaded')
-    desc.classList.add('loaded')
-    target.classList.remove('paragraph-skeleton')
-    heading.parentNode.classList.remove('skeleton-heading')
-    desc.parentNode.classList.remove('skeleton-desc')
-    document.querySelector('.bottom').classList.add('background')
-  }, 500);
-
 })
 
 
