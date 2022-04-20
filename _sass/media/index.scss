@@ -52,6 +52,10 @@
         .desktop-sitespecs {
             display: none;
         }
+        .origin-reports-container:nth-of-type(3),
+        .origin-reports-container:nth-of-type(4) {
+            display: none;
+        }
     }
     .other-projects {
         .container {
