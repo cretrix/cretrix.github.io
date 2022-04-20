@@ -39,7 +39,7 @@
     mobile: 
       - img: assets/images/ams/ams-ios1.png
       - img: assets/images/ams/ams-ios2.png
-      - img: assets/images/ams/ams-ios3.svg
+      - img: assets/images/ams/ams-ios3.png
     desktop:
       - img: assets/images/ams/ams-ios4.png
       - img: assets/images/ams/ams-ios5.png

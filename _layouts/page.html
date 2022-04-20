@@ -68,7 +68,9 @@
             {% for el in item.other %}
             <div class="item">
                 <div class="wrapper">
-                    <img src="{{el.img}}" />
+                    <a href="{{ site.baseurl }}{{ el.link }}">
+                        <img src="{{el.img}}" />
+                    </a>
                 </div>
                 <a href="{{ site.baseurl }}{{ el.link }}">
                     View project

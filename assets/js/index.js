@@ -61,16 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  function showPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    window.location.href = `https://www.google.com/maps/dir/${latitude},${longitude}/36+Keri+St,+Yerevan+0033/@${latitude},${longitude},14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x406abd6ea53a8d9b:0xfd561ab6d2b429c7!2m2!1d44.4870432!2d40.1996368`;
-  }
   let dirBtn = document.querySelector('#directions')
   dirBtn.onclick = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    }
+    window.location.href = `https://www.google.com/maps/place/36+Keri+St,+Yerevan+0033/@40.1996368,44.4848545,17z/data=!3m1!4b1!4m5!3m4!1s0x406abd6ea53a8d9b:0xfd561ab6d2b429c7!8m2!3d40.1996368!4d44.4870432`
   }
   let textareaElem = document.querySelector('textarea');
   const counterElem = document.querySelector('.counter');

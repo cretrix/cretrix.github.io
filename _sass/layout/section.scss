@@ -117,7 +117,8 @@ section h3:first-of-type {
 
             .content {
                 background: #f0f0f5;
-                padding: 3rem;
+                display: grid;
+                place-content: center;
 
                 h4 {
                     font-size: 20px;
@@ -171,7 +172,7 @@ section h3:first-of-type {
     .paragraph {
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         p {
             max-width: 800px;
@@ -205,30 +206,40 @@ section h3:first-of-type {
                 float: right;
                 margin-top: 0.5rem;
             }
+            textarea {
+                font-size: 16px;
+                height: 70px;
+                padding: 1.5rem 1rem 0;
+                font-family: "SF Pro Display Light";
+                &::placeholder {
+                    font-size: 16px;
+                    color: #838388;
+                }
+            }
             input,
             textarea {
                 outline: none;
                 border: none;
                 border-bottom: 2px solid #f0f0f5;
-                padding: 1rem;
                 width: 100%;
                 background-color: #fff;
                 transition: 0.4s ease;
                 &:hover {
                     border-bottom: 2px solid #838388;
-                }
 
+                    &:focus {
+                        border-bottom: 2px solid #3caeed;
+                    }
+                }
+            }
+            input {
+                padding: 1rem;
                 &::placeholder {
                     font-size: 16px;
                     line-height: 19px;
                     color: #838388;
                     font-family: "SF Pro Display Light";
                 }
-                &:focus {
-                    border-bottom: 2px solid #3caeed;
-                }
-            }
-            input {
                 // & + span {
                 //     display: none;
                 // }
