@@ -88,7 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(target)
   };
   targets.forEach(lazyLoad);
+  document.querySelectorAll('.form-input').forEach(el => {
+    el.childNodes[1].addEventListener('input', _ => {
+      let name = document.querySelector('form input[type="text"]')
+      let email = document.querySelector('form input[type="email"]')
+      let textarea = document.querySelector('form textarea')
+      if (name.value.length > 6 && email.value.length > 6 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) && textarea.value.length > 4) {
+        document.querySelector('.send input').disabled = false;
+      } else {
+        document.querySelector('.send input').disabled = true;
+      }
+    })
+  })
 
+  let form = document.querySelector('#contact form')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    e.target.querySelector('.send').classList.add('fadeout')
+  })
 })
 
 

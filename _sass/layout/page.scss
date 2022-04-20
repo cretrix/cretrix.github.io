@@ -17,7 +17,6 @@
     }
 }
 
-
 .page-section {
     padding-left: 9rem;
     padding-right: 9rem;
@@ -148,11 +147,17 @@
     .ams-skeleton {
         width: 231px;
         height: 468px;
+        img {
+            border-radius: 30px;
+        }
     }
     .unique-skeleton,
     .sitespecs-skeleton {
         width: 786px;
         height: 453px;
+        img {
+            border-radius: 30px;
+        }
     }
 }
 
