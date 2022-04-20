@@ -1,3 +1,30 @@
+@keyframes animate {
+    from {
+        transform: rotateX(20deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes loader {
+    from {
+        background-position: -100% 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .page-section {
     padding-left: 9rem;
     padding-right: 9rem;
@@ -41,12 +68,45 @@
             height: 60vh;
             border-radius: 0;
         }
+        .icon-skeleton {
+            width: 50px;
+            height: 50px;
+        }
+
         .bottom {
-            background: #f3f3f3;
             display: flex;
             justify-content: space-between;
             padding: 30px 80px;
             align-items: center;
+            &.background {
+                background: #f3f3f3;
+            }
+            .skeleton-desc,
+            .skeleton-heading {
+                background: linear-gradient(90deg, hsl(210, 15%, 88%), hsl(210, 15%, 95%), hsl(210, 15%, 88%));
+                background-size: 200%;
+                animation: loader 1s infinite reverse;
+                width: 350px;
+                height: 50px;
+                border: 2px solid #cbcbd9;
+                border-radius: 5px;
+            }
+            &.paragraph-skeleton {
+                background: linear-gradient(90deg, hsl(210, 15%, 88%), hsl(210, 15%, 95%), hsl(210, 15%, 88%));
+                background-size: 200%;
+                animation: loader 1s infinite reverse;
+                .skeleton-desc,
+                .skeleton-heading {
+                    p,
+                    h3 {
+                        opacity: 0;
+                    }
+                }
+            }
+            .loaded {
+                animation: fadeIn 1s;
+                opacity: 1 !important;
+            }
             div:first-of-type {
                 display: flex;
                 align-items: center;
@@ -93,24 +153,6 @@
 
 .animate {
     animation: animate 1s ease;
-}
-@keyframes animate {
-    from {
-        transform: rotateX(20deg);
-        opacity: 0;
-    }
-    to {
-        transform: rotateX(0deg);
-        opacity: 1;
-    }
-}
-@keyframes loader {
-    from {
-        background-position: -100% 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
 }
 
 .designs {

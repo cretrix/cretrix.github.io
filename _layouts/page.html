@@ -12,12 +12,18 @@
             <div class="skeleton hero-skeleton hero-img">
                 <img data-src="{{item.heroimg}}" src="{{item.heroimg}}" />
             </div>
-            <div class="bottom">
+            <div class="bottom paragraph-skeleton">
                 <div>
-                    <img src="{{item.icon}}" />
-                    <h3>{{item.herotitle}}</h3>
+                    <div class="skeleton icon-skeleton">
+                        <img data-src="{{item.icon}}" src="{{item.icon}}" />
+                    </div>
+                    <div class="skeleton-heading">
+                        <h3 data-text="{{item.herotitle}}">{{item.herotitle}}</h3>
+                    </div>
                 </div>
-                <p>{{item.description}}</p>
+                <div class="skeleton-desc">
+                    <p data-text="{{item.description}}">{{item.description}}</p>
+                </div>
             </div>
         </div>
     </section>
