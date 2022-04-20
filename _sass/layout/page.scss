@@ -17,6 +17,14 @@
         }
     }
 }
+.skeleton {
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 2px solid #cbcbd9;
+    background: linear-gradient(90deg, hsl(210, 15%, 88%), hsl(210, 15%, 95%), hsl(210, 15%, 88%));
+    background-size: 200%;
+    animation: loader 1s infinite reverse;
+}
 
 .page-header {
     .container {
@@ -27,6 +35,11 @@
                 height: 100%;
                 object-fit: cover;
             }
+        }
+        .hero-skeleton {
+            width: 100%;
+            height: 60vh;
+            border-radius: 0;
         }
         .bottom {
             background: #f3f3f3;
@@ -78,6 +91,28 @@
     }
 }
 
+.animate {
+    animation: animate 1s ease;
+}
+@keyframes animate {
+    from {
+        transform: rotateX(20deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes loader {
+    from {
+        background-position: -100% 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
 .designs {
     .desktop-container {
         margin-top: 1.5rem;
@@ -101,6 +136,16 @@
             height: 100%;
             object-fit: contain;
         }
+    }
+    .mobile-skeleton,
+    .ams-skeleton {
+        width: 231px;
+        height: 468px;
+    }
+    .unique-skeleton,
+    .sitespecs-skeleton {
+        width: 786px;
+        height: 453px;
     }
 }
 

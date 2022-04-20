@@ -71,4 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let countInput = textareaElem.value.length;
     counterElem.innerHTML = `${countInput}/300`;
   });
+
+  const targets = document.querySelectorAll('.skeleton img');
+  const lazyLoad = target => {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        const img = entry.target;
+        const src = img.getAttribute('data-src');
+        img.setAttribute('src', src);
+        img.onload = () => {
+          img.parentNode.classList.remove('skeleton', 'mobile-skeleton', 'hero-skeleton', 'desktop-skeleton', 'unique-skeleton', 'sitespecs-skeleton', 'ams-skeleton')
+        }
+        observer.disconnect();
+      });
+    });
+    io.observe(target)
+  };
+  targets.forEach(lazyLoad);
 })
+
+
+
+
