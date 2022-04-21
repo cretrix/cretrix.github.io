@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(target)
   };
   targets.forEach(lazyLoad);
+  let name = document.querySelector('form input[type="text"]')
+  let email = document.querySelector('form input[type="email"]')
+  let textarea = document.querySelector('form textarea')
   document.querySelectorAll('.form-input').forEach(el => {
     el.childNodes[1].addEventListener('input', _ => {
-      let name = document.querySelector('form input[type="text"]')
-      let email = document.querySelector('form input[type="email"]')
-      let textarea = document.querySelector('form textarea')
       if (name.value.length > 6 && email.value.length > 6 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) && textarea.value.length > 4) {
         document.querySelector('.send input').disabled = false;
       } else {
@@ -125,25 +125,48 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
   }
 
+  const submitData = async () => {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin', 'http://localhost:4000');
+    const res = await fetch('http://api.test/send-message', {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: textarea.value
+      })
+    });
+    const content = await res.json();
+    console.log(content);
+  }
+
   let form = document.querySelector('#contact form')
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault()
-    e.target.querySelector('.send').classList.add('fadeout')
-    let sendContainer = document.querySelector('.fadeout')
-    sendContainer.addEventListener("animationend", function () {
-      sendContainer.style.display = 'none'
-      sendContainer.classList.remove('fadeout');
-      //api call to backend to do
-      sendContainer.classList.add('success')
-      let successContainer = document.querySelector('.send-message')
-      fadeIn(successContainer)
-      setTimeout(() => {
-        fadeOut(successContainer)
-      }, 2000);
-      setTimeout(() => {
-        fadeIn(sendContainer)
-      }, 3000);
-    }, false);
+    try {
+      // await submitData();
+      e.target.querySelector('.send').classList.add('fadeout')
+      let sendContainer = document.querySelector('.fadeout')
+      sendContainer.addEventListener("animationend", function () {
+        sendContainer.style.display = 'none'
+        sendContainer.classList.remove('fadeout');
+        sendContainer.classList.add('success')
+        let successContainer = document.querySelector('.send-message')
+        fadeIn(successContainer)
+        setTimeout(() => {
+          fadeOut(successContainer)
+        }, 2000);
+        setTimeout(() => {
+          fadeIn(sendContainer)
+        }, 3000);
+      }, false);
+    }
+    catch (error) {
+      console.error(error)
+    }
   })
 })
 
