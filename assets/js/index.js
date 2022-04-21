@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let textarea = document.querySelector('form textarea')
   document.querySelectorAll('.form-input').forEach(el => {
     el.childNodes[1].addEventListener('input', _ => {
-      if (name.value.length > 6 && email.value.length > 6 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) && textarea.value.length > 4) {
+      if (name.value.length > 3 && email.value.length > 6 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value) && textarea.value.length > 4) {
         document.querySelector('.send input').disabled = false;
       } else {
         document.querySelector('.send input').disabled = true;
