@@ -101,11 +101,49 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  let form = document.querySelector('#contact form')
 
+  function fadeIn(el, display) {
+    el.style.opacity = 0;
+    el.style.display = display || "flex";
+    (function fade() {
+      var val = parseFloat(el.style.opacity);
+      if (!((val += .1) > 1)) {
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+  function fadeOut(el) {
+    el.style.opacity = 1;
+
+    (function fade() {
+      if ((el.style.opacity -= .1) < 0) {
+        el.style.display = 'none';
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+
+  let form = document.querySelector('#contact form')
   form.addEventListener('submit', e => {
     e.preventDefault()
     e.target.querySelector('.send').classList.add('fadeout')
+    let sendContainer = document.querySelector('.fadeout')
+    sendContainer.addEventListener("animationend", function () {
+      sendContainer.style.display = 'none'
+      sendContainer.classList.remove('fadeout');
+      //api call to backend to do
+      sendContainer.classList.add('success')
+      let successContainer = document.querySelector('.send-message')
+      fadeIn(successContainer)
+      setTimeout(() => {
+        fadeOut(successContainer)
+      }, 2000);
+      setTimeout(() => {
+        fadeIn(sendContainer)
+      }, 3000);
+    }, false);
   })
 })
 
